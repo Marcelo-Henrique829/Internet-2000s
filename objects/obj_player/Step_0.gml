@@ -7,13 +7,6 @@ var _i = global.inputs
 var _chao = place_meeting(x,y+1,colisores)
 var _move = _i.right  - _i.left
 
-
-var _camera = Obj_camera
-_camera.x = x
-_camera.y = y
-
-
-
 if(vspd>=30) altura_certa = 1;
 	
 
@@ -40,7 +33,7 @@ switch(state)
 		
   		if(hspd!=0)
 		{
-			sprite_index = spr_player_walk
+			sprite_index = spr_player_run_3
 			if(_i.run)
 			{
 				state = "run"
@@ -68,7 +61,7 @@ switch(state)
 		attack()
 		
 		
-		sprite_index = spr_player_run
+		sprite_index = spr_player_run_2
 		
 		
 		if(!_i.run or hspd==0)
@@ -108,7 +101,7 @@ switch(state)
 		hspd = 0
 		hit()
 		fall()
-		sprite_index = spr_player_attack_sword
+		sprite_index = spr_player_atk
 		trampolin_meet()
 
 		
@@ -148,7 +141,7 @@ switch(state)
 		fall()
 		trampolin_meet()
 
-		sprite_index = spr_player_attack_sword_1
+		sprite_index = spr_player_atk
 		
 		if(_i.attack)
 		{
@@ -184,7 +177,7 @@ switch(state)
 		fall()
 		trampolin_meet()
 
-		sprite_index = spr_player_attack_sword_2
+		sprite_index = spr_player_atk
 		if(_i.attack)
 		{
 			
@@ -211,7 +204,7 @@ switch(state)
 		morte = 1
 		Obj_tremetala.treme = 50;
 		hit_time--
-		sprite_index = spr_player_death
+		sprite_index = spr_player_destroy
 		hspd = lengthdir_x(hit_strong,global.hit_dirh)
 		vspd = lengthdir_y(hit_strong,global.hit_dirv)
 		if(hit_time<=0)
@@ -227,7 +220,7 @@ switch(state)
 	
  	case "morte":
 	{
-		sprite_index = spr_player_death
+		sprite_index = spr_player_destroy
 
 		
 		
@@ -261,7 +254,7 @@ switch(state)
 	case "dash":
 	{
 		spd = dash._speed
-		sprite_index = spr_player_dash
+		sprite_index = spr_player_run_2
 		hit()
 		fall()
 		jump()

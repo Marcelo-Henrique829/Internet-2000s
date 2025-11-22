@@ -5,7 +5,7 @@ draw_self()
 
 	
 			
-		if(sprite_index == spr_player_attack_sword or sprite_index == spr_player_attack_sword_1 or sprite_index == spr_player_attack_sword_2)
+		if(sprite_index == spr_player_atk)
 		{
 			
 			if(image_index <= 1)

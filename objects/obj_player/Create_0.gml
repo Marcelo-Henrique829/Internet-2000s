@@ -29,7 +29,7 @@
 	
 #endregion
 
- #region hit
+#region hit
 
 hit_cooldown = 10;
 hit_time = hit_cooldown;
@@ -75,7 +75,6 @@ dashing = function()
 	
 
 #endregion
-
 
 #region coyote
 

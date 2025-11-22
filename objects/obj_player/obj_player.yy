@@ -33,13 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":{
-    "name":"spr_player_iddle",
-    "path":"sprites/spr_player_iddle/spr_player_iddle.yy",
-  },
-  "spriteMaskId":{
-    "name":"spr_player_iddle",
-    "path":"sprites/spr_player_iddle/spr_player_iddle.yy",
-  },
+  "spriteId":null,
+  "spriteMaskId":null,
   "visible":true,
 }
