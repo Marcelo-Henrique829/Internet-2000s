@@ -31,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_bluetoth",
-    "path":"sprites/spr_bluetoth/spr_bluetoth.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

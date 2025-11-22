@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_chkrres_dll_14_1009_7",
-    "path":"sprites/spr_chkrres_dll_14_1009_7/spr_chkrres_dll_14_1009_7.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

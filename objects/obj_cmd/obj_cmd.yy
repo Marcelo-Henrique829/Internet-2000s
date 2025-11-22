@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_console_dll_14_1_7",
-    "path":"sprites/spr_console_dll_14_1_7/spr_console_dll_14_1_7.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

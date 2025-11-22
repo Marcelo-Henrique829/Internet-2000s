@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_compatUI_dll_14_210_2",
-    "path":"sprites/spr_compatUI_dll_14_210_2/spr_compatUI_dll_14_210_2.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

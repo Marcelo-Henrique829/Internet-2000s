@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_certmgr_dll_14_218_1",
-    "path":"sprites/spr_certmgr_dll_14_218_1/spr_certmgr_dll_14_218_1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

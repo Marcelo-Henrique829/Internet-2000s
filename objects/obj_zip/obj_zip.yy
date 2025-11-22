@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_zip",
-    "path":"sprites/spr_zip/spr_zip.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

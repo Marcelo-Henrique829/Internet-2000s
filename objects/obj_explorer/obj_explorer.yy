@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_explorer_exe_14_101_8",
-    "path":"sprites/spr_explorer_exe_14_101_8/spr_explorer_exe_14_101_8.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

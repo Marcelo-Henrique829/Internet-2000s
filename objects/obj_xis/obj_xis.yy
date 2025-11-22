@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_xis",
-    "path":"sprites/spr_xis/spr_xis.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

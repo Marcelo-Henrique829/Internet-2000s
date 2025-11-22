@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_lixeria",
-    "path":"sprites/spr_lixeria/spr_lixeria.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
