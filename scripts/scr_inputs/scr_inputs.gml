@@ -24,6 +24,7 @@ global.inputs = {
 	y:false
 }
 
+global.gamepad_id = noone
 
 function scr_inputs(_bool)
 {

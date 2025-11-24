@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_parede",
+  "%Name":"obj_wall",
   "eventList":[],
   "managed":true,
-  "name":"obj_parede",
+  "name":"obj_wall",
   "overriddenProperties":[],
   "parent":{
     "name":"colisores",

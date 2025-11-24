@@ -10,8 +10,8 @@
     "path":"folders/Objetos/colisores.yy",
   },
   "parentObjectId":{
-    "name":"obj_parede",
-    "path":"objects/obj_parede/obj_parede.yy",
+    "name":"obj_wall",
+    "path":"objects/obj_wall/obj_wall.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
