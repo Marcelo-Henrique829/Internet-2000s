@@ -69,7 +69,29 @@ trampolin_time = trampolin_def_time;
 trampolin = 0
 
 #endregion
+process_action = function(hit = true,jump = true,fall_shake = true)
+{
+    var i = global.input
+    coyte() //a função que roda o código do efeito coyote
+    
+    var _hit = place_meeting(x,y,inimigo)
+    var _floor = place_meeting(x,y+1,colisores)
+    
+    if(hit and _hit) state = STATE.HIT
+        
+    if(coyte_time  and i.jump and jump)
+    {
+        vspd -= jump_force
+        state = STATE.JUMP
+    }
+    if(_floor and altura_certa)
+    {
+        instance_create_layer(x,y+sprite_height,layer,obj_smoke_jump_effect)
+        altura_certa = 0;
+        Obj_tremetala.treme = 20;
 
+    }
+}
 
 
  

@@ -1,44 +1,24 @@
- #region inputs
-
-
-#endregion
 var i = global.input
 var _chao = place_meeting(x,y+1,colisores)
 var _move = i.right - i.left
-var _hit = place_meeting(x,y,inimigo)
 
 
-if(hspd!=0) //este código faz a sprite do player virar para esquerda e para direita
-{
-	image_xscale = sign(hspd)
-}
 
-
-if(i.sprint and _move!=0) //para o player correr
-{
-	spd = spd_max
-
-}
-else
-{
-	spd = def_spd;
-	
-}
-
-if(vspd>=22) altura_certa = 1;
+if(hspd!=0) image_xscale = sign(hspd) //este código faz a sprite do player virar para esquerda e para direita
+if(i.sprint and _move!=0) spd = spd_max //para o player correr
+else spd = def_spd;
+if(vspd>=22) altura_certa = true;
 	
 
-coyte() //a função que roda o código do efeito coyote
 
 switch(state)
 {
 	case STATE.IDDLE:
 	{
 		sprite_index = spr_stickman_iddle
-		
-		hspd = spd*_move
+        process_action(true,true,true)
+		hspd = spd * _move
 		vspd = grv + vspd
-		
  		if(hspd!=0)
 		{
 			sprite_index = spr_stickman_run
@@ -48,23 +28,6 @@ switch(state)
 
 			}
 		}
-
-		
-		
-		
-		if(coyte_time  and i.jump)
-		{
-			vspd -= jump_force
-			
-			state = STATE.JUMP
-		}
-		
-		if(_hit)
-		{
-			state = STATE.HIT
-		}
-		
-		
 		
 		if(!_chao and place_meeting(x+sign(hspd),y,obj_grude))
 		{
@@ -72,13 +35,7 @@ switch(state)
 		}
 		
 	
-		if(_chao and altura_certa)
-		{
-			instance_create_layer(x,y+sprite_height,layer,obj_smoke_jump_effect)
-			altura_certa = 0;
-			Obj_tremetala.treme = 20;
 
-		}
 	
 	}
 	break;
@@ -87,31 +44,13 @@ switch(state)
 	{
 		
 		
-		
+        process_action(true,false,true)
 		sprite_index = spr_stickman_jump
 		hspd = spd*_move
 		vspd = grv + vspd
 		
-		if(scr_end_animation(spr_stickman_jump) or _chao)
-		{
-			state = STATE.IDDLE
-		}
-		
-		if(_hit)
-		{
-			state = STATE.HIT
-		}
-		
-		if(_chao and altura_certa)
-		{
-			instance_create_layer(x,y+sprite_height-30,layer,obj_smoke_jump_effect)
-			altura_certa = 0;
-			Obj_tremetala.treme = 20;
+		if(scr_end_animation(spr_stickman_jump) or _chao) state = STATE.IDDLE
 
-		}
-		
-		
-		
 		if(!_chao and place_meeting(x+sign(hspd),y,obj_grude))
 		{
 			state = STATE.HANGING
@@ -141,32 +80,22 @@ switch(state)
 	
 	case STATE.HANGING:
 	{
-	
-				
-			vspd = 0;
-			sprite_index = spr_stickman_pendurado
-			if(i.jump)
-			{
-					vspd -= jump_force
-					hspd = _move * spd
-					state = STATE.JUMP
-					
-			}
-			
-			if(_hit)
-			{
-				state  = STATE.HIT
-			}
-	
+       vspd = 0;
+       sprite_index = spr_stickman_pendurado
+       process_action(true,false,false)
+       if(i.jump)
+       {
+               vspd -= jump_force
+               hspd = _move * spd
+               state = STATE.JUMP
+               
+       }
 	}
 	break;
 	
 	case STATE.DEFEAT:
 	{
 		sprite_index = spr_stickman_destroy
-
-		
-		
 		if(image_index>=image_number-1)
 		{
 			global.score = 0;
@@ -178,10 +107,11 @@ switch(state)
 	case STATE.APEAR:
 	{
 		hspd = 0;
-		
 		sprite_index = spr_stickman_apear
+        process_action(true,true,false)
 		if(scr_end_animation(spr_stickman_apear))
 		{
+            image_index = 0
 			state = STATE.IDDLE
 		}
 		
@@ -202,9 +132,7 @@ switch(state)
 		
 		hspd = lengthdir_x(trampolin.force,trampolin.image_angle);
 		vspd = lengthdir_y(trampolin.force,trampolin.image_angle);
-		
-		if(_hit) state = STATE.HIT;
-		
+		process_action(true,false,false)
 		if(trampolin_time<=0)
 		{
 			state = STATE.IDDLE;
