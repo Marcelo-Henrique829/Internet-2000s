@@ -1,4 +1,13 @@
-
+enum STATE 
+{
+    IDDLE,
+    JUMP,
+    HIT,
+    HANGING,
+    DEFEAT,
+    APEAR
+    	
+}
 #region movimentação
 	vspd = 0;
 	hspd = 0;
@@ -7,7 +16,7 @@
 	def_spd = 5;
 	dir = 0;
 	spd_max = 7;
-	jump_force = 12;
+	jump_force = 20;
 	
 	instance_create_layer(0,0,layer,obj_input_controler)
 #endregion
@@ -15,7 +24,7 @@
 #region estado/arrays
 
 	morte = 0;
-	state = "apear";
+	state = STATE.APEAR;
 	colisores = [obj_parede,obj_grude,obj_par_colisor];
 	inimigo = [obj_pop_up,obj_aviso,obj_xis]
 	altura_certa = 0;

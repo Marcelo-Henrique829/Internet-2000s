@@ -36,7 +36,7 @@ coyte() //a função que roda o código do efeito coyote
 
 switch(state)
 {
-	case "iddle":
+	case STATE.IDDLE:
 	{
 		sprite_index = spr_stickman_iddle
 		
@@ -60,19 +60,19 @@ switch(state)
 		{
 			vspd -= jump_force
 			
-			state = "jump"
+			state = STATE.JUMP
 		}
 		
 		if(_hit)
 		{
-			state = "hit"
+			state = STATE.HIT
 		}
 		
 		
 		
 		if(!_chao and place_meeting(x+sign(hspd),y,obj_grude))
 		{
-			state = "pendurado"
+			state = STATE.HANGING
 		}
 		
 	
@@ -87,7 +87,7 @@ switch(state)
 	}
 	break;
 	
-	case "jump":
+	case STATE.JUMP:
 	{
 		
 		
@@ -98,12 +98,12 @@ switch(state)
 		
 		if(scr_end_animation(spr_stickman_jump) or _chao)
 		{
-			state = "iddle"
+			state = STATE.IDDLE
 		}
 		
 		if(_hit)
 		{
-			state = "hit"
+			state = STATE.HIT
 		}
 		
 		if(_chao and altura_certa)
@@ -118,15 +118,14 @@ switch(state)
 		
 		if(!_chao and place_meeting(x+sign(hspd),y,obj_grude))
 		{
-			state = "pendurado"
+			state = STATE.HANGING
 		}
 
 		
 	}
 	break;
 	
-	
-	case "hit":
+	case STATE.HIT:
 	{
 		
 		morte = 1
@@ -137,14 +136,14 @@ switch(state)
 		vspd = lengthdir_y(hit_strong,global.hit_dirv)
 		if(hit_time<=0)
 		{
-			state = "morte"
+			state = STATE.DEFEAT
 			hit_time = hit_cooldown
 		}
 		
 	}
 	break;
 	
-	case "pendurado":
+	case STATE.HANGING:
 	{
 	
 				
@@ -154,19 +153,19 @@ switch(state)
 			{
 					vspd -= jump_force
 					hspd = _move * spd
-					state = "jump"
+					state = STATE.JUMP
 					
 			}
 			
 			if(_hit)
 			{
-				state  = "hit"
+				state  = STATE.HIT
 			}
 	
 	}
 	break;
 	
-	case "morte":
+	case STATE.DEFEAT:
 	{
 		sprite_index = spr_stickman_destroy
 
@@ -180,14 +179,14 @@ switch(state)
 	}
 	break;
 	
-	case "apear":
+	case STATE.APEAR:
 	{
 		hspd = 0;
 		
 		sprite_index = spr_stickman_apear
 		if(scr_end_animation(spr_stickman_apear))
 		{
-			state = "iddle"
+			state = STATE.IDDLE
 		}
 		
 		
@@ -208,11 +207,11 @@ switch(state)
 		hspd = lengthdir_x(trampolin.force,trampolin.image_angle);
 		vspd = lengthdir_y(trampolin.force,trampolin.image_angle);
 		
-		if(_hit) state = "hit";
+		if(_hit) state = STATE.HIT;
 		
 		if(trampolin_time<=0)
 		{
-			state = "iddle";
+			state = STATE.IDDLE;
 			trampolin_time = trampolin_def_time;
 		}
 		
@@ -224,7 +223,7 @@ switch(state)
 
 if(morte)
 {
-	state = "morte"
+	state = STATE.DEFEAT
 }
 show_debug_message(altura_certa)
 
