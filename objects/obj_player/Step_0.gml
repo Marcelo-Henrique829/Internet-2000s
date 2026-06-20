@@ -1,14 +1,10 @@
  #region inputs
 
-var _esquerda = keyboard_check(ord("A")) or gamepad_axis_value(global.gamepad_id,gp_axislh) < - 0.25
-var _direita = keyboard_check(ord("D")) or gamepad_axis_value(global.gamepad_id,gp_axislh) >  0.25
-var _jump = keyboard_check(vk_space) or gamepad_button_check_pressed(global.gamepad_id,gp_face1)
-var _fast = keyboard_check(vk_shift) or gamepad_button_check(global.gamepad_id,gp_face3)
 
 #endregion
-
+var i = global.input
 var _chao = place_meeting(x,y+1,colisores)
-var _move = _direita - _esquerda
+var _move = i.right - i.left
 var _hit = place_meeting(x,y,inimigo)
 
 
@@ -18,7 +14,7 @@ if(hspd!=0) //este código faz a sprite do player virar para esquerda e para dir
 }
 
 
-if(_fast and _move!=0) //para o player correr
+if(i.sprint and _move!=0) //para o player correr
 {
 	spd = spd_max
 
@@ -46,7 +42,7 @@ switch(state)
  		if(hspd!=0)
 		{
 			sprite_index = spr_stickman_run
-			if(_fast)
+			if(i.sprint)
 			{
 				sprite_index = spr_gotta_go_fast02
 
@@ -56,7 +52,7 @@ switch(state)
 		
 		
 		
-		if(coyte_time  and _jump)
+		if(coyte_time  and i.jump)
 		{
 			vspd -= jump_force
 			
@@ -149,7 +145,7 @@ switch(state)
 				
 			vspd = 0;
 			sprite_index = spr_stickman_pendurado
-			if(_jump)
+			if(i.jump)
 			{
 					vspd -= jump_force
 					hspd = _move * spd

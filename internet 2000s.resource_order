@@ -69,6 +69,7 @@
     {"name":"rm_menu","order":4,"path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"rm_ponpon","order":1,"path":"rooms/rm_ponpon/rm_ponpon.yy",},
     {"name":"rm_stick_mob","order":5,"path":"rooms/rm_stick_mob/rm_stick_mob.yy",},
+    {"name":"scr_global_inputs","order":2,"path":"scripts/scr_global_inputs/scr_global_inputs.yy",},
     {"name":"transicao","order":1,"path":"scripts/transicao/transicao.yy",},
     {"name":"seq_fade_out","order":1,"path":"sequences/seq_fade_out/seq_fade_out.yy",},
     {"name":"Botao_windows2","order":17,"path":"sprites/Botao_windows2/Botao_windows2.yy",},

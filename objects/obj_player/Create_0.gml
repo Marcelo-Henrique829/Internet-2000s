@@ -9,6 +9,7 @@ enum STATE
     	
 }
 #region movimentação
+
 	vspd = 0;
 	hspd = 0;
 	grv = 0.7;
