@@ -17,7 +17,7 @@ enum STATE
 	def_spd = 5;
 	dir = 0;
 	spd_max = 7;
-	jump_force = 20;
+	jump_force = 15;
 	
 	instance_create_layer(0,0,layer,obj_input_controler)
 #endregion

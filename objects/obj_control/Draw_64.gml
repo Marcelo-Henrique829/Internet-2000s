@@ -17,9 +17,7 @@ draw_set_valign(-1)
 
 
 
-if(obj_camera.alvo==obj_link_coletavel)
-{
-	
-	draw_sprite_ext(spr_cinema,0,0,0,1,1,0,c_white,_alpha)
-}
+if(obj_camera.alvo==obj_link_coletavel)  alpha = lerp(alpha,1,0.3)
+    else alpha = lerp(alpha,0,0.3)
+	scr_cinema_barras(0.30,c_black,alpha)
 
