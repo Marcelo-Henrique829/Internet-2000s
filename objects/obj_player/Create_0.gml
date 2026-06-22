@@ -26,6 +26,7 @@ enum STATE
 
 	morte = 0;
 	state = STATE.APEAR;
+	// Objetos que o player trata como solidos no sistema de colisao.
 	colisores = [obj_parede,obj_grude,obj_par_colisor];
 	inimigo = [obj_pop_up,obj_aviso,obj_xis]
 	altura_certa = 0;
