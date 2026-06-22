@@ -8,7 +8,6 @@ if(place_meeting(x,y,obj_player))
 	obj_player.state = "trampolin"
 }
 
-show_debug_message(image_angle)
 
 
 

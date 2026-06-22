@@ -33,17 +33,11 @@ switch(state)
 		{
 			state = STATE.HANGING
 		}
-		
-	
-
-	
 	}
 	break;
 	
 	case STATE.JUMP:
 	{
-		
-		
         process_action(true,false,true)
 		sprite_index = spr_stickman_jump
 		hspd = spd*_move
@@ -55,15 +49,13 @@ switch(state)
 		{
 			state = STATE.HANGING
 		}
-
-		
 	}
 	break;
 	
 	case STATE.HIT:
 	{
 		
-		morte = 1
+		morte = true
 		Obj_tremetala.treme = 50;
 		hit_time--
 		sprite_index = spr_stickman_hit
@@ -74,7 +66,6 @@ switch(state)
 			state = STATE.DEFEAT
 			hit_time = hit_cooldown
 		}
-		
 	}
 	break;
 	
@@ -114,8 +105,6 @@ switch(state)
             image_index = 0
 			state = STATE.IDDLE
 		}
-		
-		
 	}
 	break;
 	

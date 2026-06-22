@@ -3,7 +3,7 @@
 scr_pou(obj_pop_up)
 
 
-if(place_meeting(x,y,obj_cursor))
+if(place_meeting(x,y,obj_mouse))
 {
 	if(mouse_check_button_pressed(mb_left))
 	{
@@ -62,7 +62,7 @@ switch(state)
 			state = "iddle"
 		}
 		
-		if(place_meeting(x,y,obj_cursor))
+		if(place_meeting(x,y,obj_mouse))
 		{
 			if(mouse_check_button_pressed(mb_left))
 			{

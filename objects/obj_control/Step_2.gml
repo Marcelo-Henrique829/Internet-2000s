@@ -1,0 +1,1 @@
+if(!instance_exists(obj_mouse)) instance_create_depth(x,y,depth,obj_mouse)

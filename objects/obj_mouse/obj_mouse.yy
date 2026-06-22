@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_cursor",
+  "%Name":"obj_mouse",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_cursor",
+  "name":"obj_mouse",
   "overriddenProperties":[],
   "parent":{
-    "name":"plataformas",
-    "path":"folders/Objetos/colisores/icones/plataformas.yy",
+    "name":"player",
+    "path":"folders/Objetos/player.yy",
   },
   "parentObjectId":null,
   "persistent":false,
